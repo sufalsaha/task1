@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 900px;
+      }
+
+      form {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+        /* padding: 12px; */
+      }
+
+      .form-man {
+        max-width: 350px;
+        width: 100%;
+        /* overflow: hidden; */
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+      }
+      input,
+      select {
+        /* width: 100%; */
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      .radio-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .file-input {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        width: 100%;
+        background: #ff6600;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      /* button:hover {
+            background: #e65c00;
+
+        } */
+
+      /* input{
+        width: 350px;
+       
+      } */
+      .date {
+        display: flex;
+        justify-content: space-between;
+        /* gap: 120px; */
+      }
+
+      .gander {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .group {
+        display: flex;
+        padding-top: 10px ;
+        padding-bottom: 10px ;
+      }
+
+      h2 {
+        color: #e0b011;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Student Registration Form</h2>
+      <hr />
+      <div>
+        <h4>Please enter relevent information</h4>
+        <p>Mandatory Field*</p>
+      </div>
+
+      <form>
+        <div class="form-man">
+          <div class="form-group">
+            <label for="district"
+              >District
+              <span
+                >(Institute District: Where you want to do your course)*</span
+              ></label
+            >
+            <select id="district" required>
+              <option value="">--Select One--</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="course">Course*</label>
+            <select id="course" required>
+              <option value="">--Select One--</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name">Student Name*</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="father">Father's Name*</label>
+            <input type="text" id="father" required />
+          </div>
+          <div class="form-group">
+            <label for="mother">Mother's Name*</label>
+            <input type="text" id="mother" required />
+          </div>
+
+          <fieldset>
+            <legend>Date of Birth*</legend>
+            <div class="date">
+              <div>
+                <label>Day:</label>
+                <select required>
+                  <option>Select</option>
+                </select>
+              </div>
+              <div>
+                <label>Month:</label>
+                <select required>
+                  <option>Select</option>
+                </select>
+              </div>
+              <div>
+                <label>Year:</label>
+                <select required>
+                  <option>Select</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- <div class="form-group">
+            <label></label>
+            <div class="radio-group">
+             
+             
+              
+            </div>
+          </div> -->
+          <div class="group">
+            <span>Gender*</span>
+
+            <div class="radio-group">
+              <div class="gander">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="Male"
+                  required
+                />
+                <label for="male">Male</label>
+              </div>
+              <div class="gander">
+                <input type="radio" id="female" name="gender" value="Female" />
+                <label for="female">Female</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" required />
+            <p>(e.g: example@gmail.com)</p>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span>(Must be 11 Digits)*</span></label>
+            <input
+              type="tel"
+              id="phone"
+              pattern="\d{11}"
+              placeholder="Must be 11 digits"
+              required
+            />
+            <p>(e.g: 01522454585)</p>
+          </div>
+        </div>
+        <div class="form-man">
+          <div class="form-group">
+            <label for="course">Indentification Type*</label>
+            <select id="course" required>
+              <option value="">--Select One--</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="course">Home District*</label>
+            <select id="course" required>
+              <option value="">--Select One--</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="course">Upazila*</label>
+            <select id="course" required>
+              <option value="">--Select One--</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name"
+              >Village/House No./Road No./Other Alternative*</label
+            >
+            <input type="text" id="Village" required />
+          </div>
+          <div class="form-group">
+            <label for="name">Post Office*</label>
+            <input type="text" id="Village" required />
+          </div>
+          <div class="form-group">
+            <label for="course"
+              >Educational Qualification* <span>(Higher Level)</span></label
+            >
+            <select id="course" required>
+              <option value="">--Select One--</option>
+            </select>
+          </div>
+          <div class="group">
+            <span>Have any computer?*</span>
+
+            <div class="radio-group">
+              <div class="gander">
+                <input
+                  type="radio"
+                  id="yes"
+                  name="gender"
+                  value="Yes"
+                  required
+                />
+                <label for="male">Yes</label>
+              </div>
+              <div class="gander">
+                <input type="radio" id="no" name="gender" value="no" />
+                <label for="female">No</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group file-input">
+            <label>Picture*</label>
+            <input type="file" accept="image/jpeg, image/png" />
+          </div>
+          <div class="form-group file-input">
+            <label>Signature*</label>
+            <input type="file" accept="image/jpeg, image/png" />
+          </div>
+          <button type="submit">Submit Data</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
